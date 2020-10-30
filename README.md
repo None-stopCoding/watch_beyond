@@ -18,7 +18,7 @@ Also included:
 It's pretty simple. All you need is get a camera inside your company and install our product.
 Once you have connected it starts to analyze the picture camera shows.
 
-# Watch Beyond
+------------------------------------------------------------------------------------------
 
 **Описание**:  Этот проект посвящен построению прогностических моделей
 для потенциальных клиентов любых бизнес-структур. Это позволяет выбрать
