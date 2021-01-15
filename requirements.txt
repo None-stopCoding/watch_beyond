@@ -1,5 +1,3 @@
-tensorflow
-keras
-opencv-python
 scikit-learn
-imageai
+cv2
+Cython
