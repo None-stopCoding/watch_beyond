@@ -1,11 +1,16 @@
-if __name__ == '__main__':
-    from learning.gender import Model, Data
+from deepface import DeepFace
+from pprint import pprint
+from flask import Flask
+from flask_cors import CORS, cross_origin
 
-    try:
-        print(
-            Model(Data('\\database\\raw\\test').prepare())
-                .train([1, 0, 1, 0])
-                .predict(Data('\\database\\raw\\predict').prepare())
-        )
-    except Exception as e:
-        print('Exception raised while processing: \n\t{}\n\t{}'.format(e, repr(e)))
+app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+
+@app.route('/')
+@cross_origin()
+def hello():
+    obj = DeepFace.analyze(["1.jpg", "2.jpg", "3.jpg"], actions=['age', 'race', 'gender', 'emotion'])
+    pprint(obj)
+    return obj
