@@ -1,3 +1,24 @@
+import { createMuiTheme } from '@material-ui/core/styles';
+
+
+export const getTheme = () => createMuiTheme({
+    palette: {
+        primary: {
+            light: '#7b7379',
+            main: '#4f484d',
+            dark: '#272125',
+            contrastText: '#f1e7ca'
+        },
+        secondary: {
+            light: '#ffffe2',
+            main: '#e8ccb0',
+            dark: '#b59b81',
+            contrastText: '#4c493d'
+        }
+    }
+})
+
+
 // import Chart from "react-google-charts";
 //
 // const [error, setError] = useState(null);
