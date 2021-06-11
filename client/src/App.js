@@ -2,7 +2,7 @@ import './App.css';
 import { getTheme } from './utils';
 
 import Main from './pages/Main';
-import Categories from './pages/Categories';
+import Attributes from './pages/Attributes';
 import Profile from './pages/Profile';
 
 import { Navbar } from './components';
@@ -19,8 +19,8 @@ function App() {
                     <Route path='/profile'>
                         <Profile />
                     </Route>
-                    <Route path='/categories'>
-                        <Categories />
+                    <Route path='/attributes'>
+                        <Attributes />
                     </Route>
                     <Route path='/'>
                         <Main />

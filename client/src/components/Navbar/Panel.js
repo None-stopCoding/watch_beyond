@@ -34,9 +34,9 @@ const menuItems = [
         icon: <Timeline />,
         path: '/profile'
     }, {
-        title: 'Категории',
+        title: 'Признаки',
         icon: <GroupWork />,
-        path: '/categories'
+        path: '/attributes'
     }
 ];
 

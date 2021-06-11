@@ -56,7 +56,7 @@ function Navbar() {
 const getTitle = (path) => {
     switch(path) {
         case '/profile': return 'Профиль';
-        case '/categories': return 'Категории';
+        case '/attributes': return 'Признаки';
         default: return 'Watch Beyond';
     }
 }
