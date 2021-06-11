@@ -1,9 +1,9 @@
 import { useHistory } from 'react-router-dom';
 
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import MuiListItem from "@material-ui/core/ListItem";
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
@@ -11,9 +11,19 @@ import { Timeline, GroupWork } from '@material-ui/icons';
 
 const useStyles = makeStyles({
     list: {
-        width: 250,
+        width: 250
     }
 });
+
+const ListItem = withStyles(({ palette }) => ({
+    root: {
+        '&:hover': {
+            backgroundColor: palette.secondary.main,
+            color: palette.secondary.contrastText
+        }
+    },
+    selected: {}
+}))(MuiListItem);
 
 const menuItems = [
     {
@@ -32,6 +42,7 @@ const menuItems = [
 
 function Panel({ open, onClose }) {
     const classes = useStyles();
+    const theme = useTheme();
     const history = useHistory();
 
     return (
@@ -44,7 +55,10 @@ function Panel({ open, onClose }) {
             >
                 <List>
                     {menuItems.map((item, index) => (
-                        <ListItem button key={item.title} onClick={() => history.push(item.path)}>
+                        <ListItem button
+                                  {...{ theme }}
+                                  key={item.title}
+                                  onClick={() => history.push(item.path)}>
                             <ListItemIcon> { item.icon } </ListItemIcon>
                             <ListItemText primary={item.title} />
                         </ListItem>

@@ -33,8 +33,11 @@ function Navbar() {
         <>
         <AppBar position="static">
             <Toolbar>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon onClick={() => toggleDrawer(true)}/>
+                <IconButton edge="start"
+                            className={classes.menuButton}
+                            onClick={() => toggleDrawer(true)}
+                            color="inherit" aria-label="menu">
+                    <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
                     { getTitle(location.pathname) }
