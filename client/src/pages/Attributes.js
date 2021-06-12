@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Container, Grid, Box, Typography, Divider } from "@material-ui/core";
-import Icon from '@material-ui/core/Icon';
+import { Container, Grid, Divider } from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
 
 import { getAttributes } from '../service';
-import { Attribute } from '../components';
+import { Attribute, Card } from '../components';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,18 +24,21 @@ function Attributes() {
     const [usedAttributes, setUsedAttributes] = useState([]);
     const [unusedAttributes, setUnusedAttributes] = useState([]);
 
+    const [attributeCard, toggleCard] = useState('');
+
     useEffect(() => {
         getAttributes({ companyId: 1, isUsed: true }).then(setUsedAttributes);
         getAttributes({ companyId: 1, isUsed: false }).then(setUnusedAttributes);
     }, []);
 
     return (
+        <>
         <Container className={classes.root}>
             <Grid container spacing={3}>
                 {
                     usedAttributes.map((attribute) =>
-                        <Grid item xs={2} key={attribute.name}>
-                            <Attribute attribute={attribute} />
+                        <Grid item xs={2} key={attribute.id}>
+                            <Attribute attribute={attribute} onClick={() => toggleCard(attribute.id)}/>
                         </Grid>
                     )
                 }
@@ -45,13 +47,19 @@ function Attributes() {
             <Grid container spacing={3}>
                 {
                     unusedAttributes.map((attribute) =>
-                        <Grid item xs={2} key={attribute.name}>
-                            <Attribute attribute={attribute} disabled />
+                        <Grid item xs={2} key={attribute.id}>
+                            <Attribute attribute={attribute} disabled onClick={() => toggleCard(attribute.id)}/>
                         </Grid>
                     )
                 }
             </Grid>
         </Container>
+        {
+            attributeCard &&
+            <Card attributeId={attributeCard}
+                  onClose={() => toggleCard('')}/>
+        }
+        </>
     );
 }
 

@@ -35,3 +35,7 @@ export const getAttributesTrends = (params) =>
 export const getAttributes = (params) =>
     callService(`api/attributes/getAll?${parseGetParams(params)}`, { method: 'GET' })
         .then((res) => res || [])
+
+export const getAttributeById = (params) =>
+    callService(`api/attribute/get?${parseGetParams(params)}`, { method: 'GET' })
+        .then((res) => res || {})

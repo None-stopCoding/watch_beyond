@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     }
 });
 
-function Attribute({ attribute, disabled }) {
+function Attribute({ attribute, disabled, onClick }) {
     const classes = useStyles({ theme: useTheme(), disabled });
 
     return (
@@ -42,8 +42,9 @@ function Attribute({ attribute, disabled }) {
              bgcolor='primary.light'
              position='relative'
              className={classes.attributes}
+             onClick={onClick}
         >
-            <Typography variant="h7" className={classes.attributeName}>
+            <Typography variant="subtitle1" className={classes.attributeName}>
                 {attribute.name}
             </Typography>
             <Icon fontSize='large' color='secondary' >{attribute.icon}</Icon>
