@@ -114,3 +114,51 @@ export const getTheme = () => createMuiTheme({
 //         </div>
 //     );
 // }
+
+
+// const availableActions = [
+//     {
+//         name: 'remove',
+//         description: 'Не анализировать',
+//         position: {
+//             top: 30,
+//             left: 40
+//         },
+//         icon: <Delete color='primary'/>,
+//         enabled: (attribute) => attribute.isUsed
+//     }
+// ];
+
+//
+// const getActions = (attribute) => {
+//     if (!attribute.showActions) {
+//         return [];
+//     }
+//
+//     return availableActions.filter((action) => {
+//         switch (action.name) {
+//             case 'remove':
+//                 return attribute.isUsed
+//             default:
+//                 return true
+//         }
+//     });
+// }
+
+// actionsShown &&
+// getActions(attribute).map((action) => {
+//     return (
+//         <Box border={1}
+//              borderRadius='50%'
+//              borderColor='primary.main'
+//              width={27}
+//              height={27}
+//              display='flex'
+//              justifyContent='center'
+//              alignItems='center'
+//              className={classes.attributeActions}
+//         >
+//             {action.icon}
+//         </Box>
+//     )
+// })

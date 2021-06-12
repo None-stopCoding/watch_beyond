@@ -1,6 +1,8 @@
 import { Container, Grid, Paper, Button } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
+import { Chart } from './../components';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: theme.palette.secondary.light,
@@ -26,7 +28,7 @@ function Profile() {
             <Grid container spacing={3}>
                 <Grid item xs={12} container spacing={3}>
                     <Grid item xs={9}>
-                        <Paper className={classes.graph}>graph</Paper>
+                        <Chart />
                     </Grid>
                     <Grid item xs={3} sm container direction='column' spacing={3}>
                         <Grid item style={{ height: 50 }}>

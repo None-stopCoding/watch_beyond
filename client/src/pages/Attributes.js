@@ -1,6 +1,10 @@
-import { Container, Grid, Box, Typography } from "@material-ui/core";
+import { useEffect, useState } from 'react';
+import { Container, Grid, Box, Typography, Divider } from "@material-ui/core";
+import Icon from '@material-ui/core/Icon';
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import { Wc, PermContactCalendar, EmojiEmotions } from '@material-ui/icons';
+
+import { getAttributes } from '../service';
+import { Attribute } from '../components';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -8,65 +12,41 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 1800,
         marginTop: 40
     },
-    attributes: {
-        '&:hover': {
-            backgroundColor: theme.palette.primary.main
-        }
-    },
-    attributeName: {
-        color: theme.palette.secondary.light
-    },
-    attributeIcons: {
-        color: 'primary',
-        fontSize: 'large'
+    divider: {
+        marginTop: 50,
+        marginBottom: 50,
+        width: '50%'
     }
 }));
 
 function Attributes() {
     const theme = useTheme();
     const classes = useStyles(theme);
+    const [usedAttributes, setUsedAttributes] = useState([]);
+    const [unusedAttributes, setUnusedAttributes] = useState([]);
 
-    const getUsedAttributes = () => {
-        return [{
-            name: 'Пол',
-            icon: <Wc fontSize='large' color='secondary' />
-        }, {
-            name: 'Возраст',
-            icon: <PermContactCalendar fontSize='large' color='secondary' />
-        }, {
-            name: 'Эмоция',
-            icon: <EmojiEmotions fontSize='large' color='secondary' />
-        }];
-    }
+    useEffect(() => {
+        getAttributes({ companyId: 1, isUsed: true }).then(setUsedAttributes);
+        getAttributes({ companyId: 1, isUsed: false }).then(setUnusedAttributes);
+    }, []);
 
     return (
         <Container className={classes.root}>
             <Grid container spacing={3}>
                 {
-                    getUsedAttributes().map((attribute) =>
+                    usedAttributes.map((attribute) =>
                         <Grid item xs={2} key={attribute.name}>
-                            <Box border={1}
-                                 borderRadius='50%'
-                                 borderColor='primary.main'
-
-                                 width={100}
-                                 height={100}
-
-                                 display='flex'
-                                 flexDirection='column'
-                                 justifyContent='center'
-                                 alignItems='center'
-                                 lineHeight={2}
-
-                                 boxShadow={3}
-                                 bgcolor='primary.light'
-                                 className={classes.attributes}
-                            >
-                                <Typography variant="h7" className={classes.attributeName}>
-                                    {attribute.name}
-                                </Typography>
-                                {attribute.icon}
-                            </Box>
+                            <Attribute attribute={attribute} />
+                        </Grid>
+                    )
+                }
+            </Grid>
+            <Divider variant="middle" className={classes.divider}/>
+            <Grid container spacing={3}>
+                {
+                    unusedAttributes.map((attribute) =>
+                        <Grid item xs={2} key={attribute.name}>
+                            <Attribute attribute={attribute} disabled />
                         </Grid>
                     )
                 }
