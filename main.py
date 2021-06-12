@@ -55,7 +55,7 @@ def get_attributes():
     company_id = request.args.get('companyId', type=int)
     is_used = request.args.get('isUsed', type=inputs.boolean)
     attrs_in_company_raw = AttributesCompanies.query.filter_by(companyId=company_id).all()
-    attrs_in_company = [{ 'id': attr.attributeId } for attr in attrs_in_company_raw]
+    attrs_in_company = [{'id': attr.attributeId} for attr in attrs_in_company_raw]
 
     for attr in attrs_in_company:
         rest_params = Attributes.query.filter_by(id=attr['id']).first()
@@ -75,6 +75,16 @@ def get_attributes():
         } for attr in
         list(filter(lambda attr: attr.id not in attrs_in_company_ids, all_attrs))
     ])
+
+
+@app.route('/api/attribute/get')
+def get_attribute_by_id():
+    attribute = Attributes.query.filter_by(id=request.args.get('id', type=int)).first()
+    return jsonify({
+        'id': attribute.id,
+        'name': attribute.name,
+        'icon': attribute.icon
+    })
 
 
 if __name__ == '__main__':
