@@ -26,10 +26,7 @@ const callService = (url, options) =>
 const parseGetParams = (params) => Object.keys(params).map((key) => `${key}=${params[key]}`).join('&');
 
 export const getAttributesTrends = (params) =>
-    callService('api/attributes/trends', {
-        method: 'POST',
-        body: JSON.stringify({ params })
-    })
+    callService(`api/attributes/trends?${parseGetParams(params)}`, { method: 'GET' })
 
 
 export const getAttributes = (params) =>

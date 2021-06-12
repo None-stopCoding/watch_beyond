@@ -25,10 +25,15 @@ function Chart({ from, to }) {
         }
     ]);
 
-    // useEffect(async () => {
-    //     const trends = await getAttributesTrends();
-    //     updateGraph(trends);
-    // }, [from, to]);
+    useEffect(async () => {
+        const trends = await getAttributesTrends({
+            companyId: 1,
+            dateFrom: '19.03.2021',
+            dateTo: '12.06.2021',
+            period: 'weeks'
+        })
+        updateGraph(trends);
+    }, []);
 
     return (
         <ResponsiveContainer width="100%" height={500}>

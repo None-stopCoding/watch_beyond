@@ -1,11 +1,11 @@
-# from deepface import DeepFace
 from pprint import pprint
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import inputs
-# from sqlalchemy.orm import relationship
-# from sqlalchemy import *
+
+from utils import create_timeline
+import importlib
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -18,6 +18,7 @@ class Attributes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=True)
     icon = db.Column(db.String(64))
+    moduleName = db.Column(db.String(64), unique=True)
 
 
 class Companies(db.Model):
@@ -36,10 +37,10 @@ db.create_all()
 
 # Заполним БД, если пустая
 if not Attributes.query.all():
-    db.session.add(Attributes(name="Пол", icon="wc"))
-    db.session.add(Attributes(name="Возраст", icon="perm_contact_calendar"))
-    db.session.add(Attributes(name="Эмоция", icon="emoji_emotions"))
-    db.session.add(Attributes(name="Раса", icon="people_alt"))
+    db.session.add(Attributes(name="Пол", icon="wc", moduleName="Gender"))
+    db.session.add(Attributes(name="Возраст", icon="perm_contact_calendar", moduleName="Age"))
+    db.session.add(Attributes(name="Эмоция", icon="emoji_emotions", moduleName="Emotion"))
+    db.session.add(Attributes(name="Раса", icon="people_alt", moduleName="Race"))
 
     db.session.add(Companies(name="Тестовая компания", imagesDir="first"))
 
@@ -85,6 +86,30 @@ def get_attribute_by_id():
         'name': attribute.name,
         'icon': attribute.icon
     })
+
+
+@app.route('/api/attributes/trends')
+def get_attributes_trends():
+    company_id = request.args.get('companyId', type=int)
+    date_from = request.args.get('dateFrom', type=str)
+    date_to = request.args.get('dateTo', type=str)
+    period = request.args.get('period', type=str)
+
+    attrs_for_company = AttributesCompanies.query.filter_by(companyId=company_id).all()
+    company = Companies.query.filter_by(id=company_id).first()
+
+    graph_data = []
+    for date in create_timeline(date_from, date_to, period):
+        graph_point = {'name': date}
+
+        for attr in attrs_for_company:
+            attribute = Attributes.query.filter_by(id=attr.attributeId).first()
+            res = importlib.import_module(f'attributes.{attribute.moduleName}')\
+                .combined_analysis(f'{company.imagesDir}/{date}')
+
+        graph_data.append(graph_point)
+
+    return jsonify(graph_data)
 
 
 if __name__ == '__main__':

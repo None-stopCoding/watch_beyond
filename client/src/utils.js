@@ -82,7 +82,7 @@ export const getTheme = () => createMuiTheme({
 //                         height={500}
 //                         chartType="BarChart"
 //                         loader={<div>Loading Chart</div>}
-//                         data={[
+//                         images={[
 //                             ['Gender', 'Количество'],
 //                             ['Мужской', gender?.Man || 0],
 //                             ['Женский', gender?.Woman || 0]
@@ -97,7 +97,7 @@ export const getTheme = () => createMuiTheme({
 //                         height={500}
 //                         chartType="BarChart"
 //                         loader={<div>Loading Chart</div>}
-//                         data={[
+//                         images={[
 //                             ['Age', 'Количество'],
 //                             ['0-20', age?.kid || 0],
 //                             ['20-40', age?.adult || 0],
