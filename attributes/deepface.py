@@ -9,10 +9,12 @@ from pprint import pprint
 
 
 def analyze_categories(img_path, actions):
-    result = DeepFace.analyze(img_path=Dir.get_images(img_path), actions=actions)
+    result = DeepFace.analyze(
+        img_path=Dir.get_images(img_path),
+        actions=actions
+    )
 
-    pprint(result)
-    return {}
+    return result
 
     # man_counter, woman_counter = 0, 0
     # for inst in result.values():
