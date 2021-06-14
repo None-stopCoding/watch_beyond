@@ -27,8 +27,8 @@ function Attributes() {
     const [attributeCard, toggleCard] = useState('');
 
     useEffect(() => {
-        getAttributes({ companyId: 1, isUsed: true }).then(setUsedAttributes);
-        getAttributes({ companyId: 1, isUsed: false }).then(setUnusedAttributes);
+        getAttributes(1, { isUsed: true }).then(setUsedAttributes);
+        getAttributes(1, { isUsed: false }).then(setUnusedAttributes);
     }, []);
 
     return (

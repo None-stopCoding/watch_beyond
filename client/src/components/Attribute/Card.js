@@ -26,7 +26,7 @@ function Card({ attributeId, onClose }) {
     const [attribute, setAttribute] = useState();
 
     useEffect(() => {
-        getAttributeById({ id: attributeId }).then(setAttribute);
+        getAttributeById(attributeId).then(setAttribute);
     }, [])
 
     return (

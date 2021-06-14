@@ -26,13 +26,13 @@ const callService = (url, options) =>
 const parseGetParams = (params) => Object.keys(params).map((key) => `${key}=${params[key]}`).join('&');
 
 export const getAttributesTrends = (params) =>
-    callService(`api/attributes/trends?${parseGetParams(params)}`, { method: 'GET' })
+    callService(`api/profile/getTrends?${parseGetParams(params)}`, { method: 'GET' })
 
 
-export const getAttributes = (params) =>
-    callService(`api/attributes/getAll?${parseGetParams(params)}`, { method: 'GET' })
+export const getAttributes = (companyId, params) =>
+    callService(`api/attribute/${companyId}/getAll?${parseGetParams(params)}`, { method: 'GET' })
         .then((res) => res || [])
 
-export const getAttributeById = (params) =>
-    callService(`api/attribute/get?${parseGetParams(params)}`, { method: 'GET' })
+export const getAttributeById = (id) =>
+    callService(`api/attribute/getOne/${id}`, { method: 'GET' })
         .then((res) => res || {})

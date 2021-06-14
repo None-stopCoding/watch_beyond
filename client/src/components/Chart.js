@@ -28,10 +28,10 @@ function Chart({ from, to }) {
     useEffect(async () => {
         const trends = await getAttributesTrends({
             companyId: 1,
-            dateFrom: '19.03.2021',
+            dateFrom: '10.04.2021',
             dateTo: '12.06.2021',
             period: 'weeks'
-        })
+        });
         updateGraph(trends);
     }, []);
 
