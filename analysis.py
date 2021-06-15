@@ -25,6 +25,20 @@ class Analysis:
         pass
 
     def run(self, date):
+        """
+        Обнволяет аналитические данные по дате в компании
+        TODO при анализе очередного признака, данные прошлого будут стерты
+        """
+        def prepare_to_store(analysis, methods):
+            prepared = methods[0](analysis)
+            combined = methods[1](prepared)
+
+            return {
+                'raw': analysis,
+                'prepared': prepared,
+                'combined': combined
+            }
+
         attrs_for_company = AttributesCompanies.query.filter_by(companyId=self.company_id).all()
         stored_report = self.get_report()
         stored_report[date] = {
@@ -41,13 +55,27 @@ class Analysis:
                 deepface_modules.append(attribute.moduleName.lower())
                 continue
 
-            raw = importlib.import_module(f'attributes.{attribute.moduleName}')\
-                .analyze_categories(f'{self.company_dir}/{date}')
-            stored_report[date]['raw'].update(raw)
+            module = importlib.import_module(f'attributes.{attribute.moduleName}')
+            stored_report[date].update(
+                prepare_to_store(
+                    module.analyze_categories(f'{self.company_dir}/{date}'),
+                    [
+                        module.combine_categories,
+                        module.combine_attributes
+                    ]
+                )
+            )
 
-        deepface_analysis = importlib.import_module(f'attributes.deepface')\
-            .analyze_categories(f'{self.company_dir}/{date}', deepface_modules)
-        stored_report[date]['raw'].update(deepface_analysis)
+        module = importlib.import_module(f'attributes.deepface')
+        stored_report[date].update(
+            prepare_to_store(
+                module.analyze_categories(f'{self.company_dir}/{date}', deepface_modules),
+                [
+                    module.combine_categories,
+                    module.combine_attributes
+                ]
+            )
+        )
 
         self.save(stored_report)
 
@@ -59,6 +87,6 @@ if __name__ == '__main__':
     app = create_app()
     context = app.app_context()
     context.push()
-    Analysis(company_id=1).run('10.04.2021')
+    Analysis(company_id=1).run('12.06.2021')
 
     context.pop()
