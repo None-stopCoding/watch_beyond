@@ -51,7 +51,7 @@ class Analysis:
 
         self.save(stored_report)
 
-    def get_attrs_for_company(self, date):
+    def set_used_attributes(self, date):
         pass
 
 
