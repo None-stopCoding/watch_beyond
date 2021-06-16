@@ -1,14 +1,11 @@
 from flask import request, jsonify, Blueprint
 
 from models import AttributesCompanies, Companies
-from app import create_app
-
-app = create_app()
 
 
-@app.route('/api/attribute/getAll')
-def get_attributes_trends():
-    company_id = request.args.get('companyId', type=int)
+
+@app.route('/api/profile/<int:company_id>/getTrends')
+def get_attributes_trends(company_id):
     date_from = request.args.get('dateFrom', type=str)
     date_to = request.args.get('dateTo', type=str)
     period = request.args.get('period', type=str)

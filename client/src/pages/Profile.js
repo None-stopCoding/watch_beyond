@@ -1,8 +1,8 @@
-import { Container, Grid, Paper, Fab, Tooltip } from '@material-ui/core';
+import { Container, Grid, Paper, Button, Fab, Tooltip } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Cached } from '@material-ui/icons';
 
-import { Chart, Settings } from './../components';
+import { Chart, Settings, Combined as AttributesGraphsCombined } from './../components';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -64,6 +64,9 @@ function Profile() {
                 </Grid>
                 <Grid item xs={6}>
                     <Paper className={classes.staticInfo} elevation={4}>static info 2</Paper>
+                </Grid>
+                <Grid item xs>
+                    <AttributesGraphsCombined />
                 </Grid>
             </Grid>
         </Container>
