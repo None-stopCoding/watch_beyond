@@ -18,6 +18,16 @@ export const getTheme = () => createMuiTheme({
     }
 })
 
+export const translateAttributes = (attributeName) => {
+    const dict = {
+        age: 'Возраст',
+        gender: 'Пол',
+        emotion: 'Эмоция'
+    }
+
+    return dict[attributeName];
+}
+
 
 // import Chart from "react-google-charts";
 //

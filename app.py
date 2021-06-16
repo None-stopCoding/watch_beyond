@@ -16,9 +16,11 @@ def create_app():
     with app.app_context():
         from models import fill_database_if_empty
         from routes.attribute import attribute_bp
+        from routes.profile import profile_bp
 
         fill_database_if_empty()
         app.register_blueprint(attribute_bp)
+        app.register_blueprint(profile_bp)
 
     return app
 

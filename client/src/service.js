@@ -25,8 +25,8 @@ const callService = (url, options) =>
 
 const parseGetParams = (params) => Object.keys(params).map((key) => `${key}=${params[key]}`).join('&');
 
-export const getAttributesTrends = (params) =>
-    callService(`api/profile/getTrends?${parseGetParams(params)}`, { method: 'GET' })
+export const getAttributesTrends = (companyId, params) =>
+    callService(`api/profile/${companyId}/getTrends?${parseGetParams(params)}`, { method: 'GET' })
 
 
 export const getAttributes = (companyId, params) =>

@@ -2,15 +2,15 @@ import json
 import importlib
 
 from models import Attributes, AttributesCompanies, Companies
-from app import create_app
-from utils import Dir
+from app import create_app, db
+from utils import Dir, get_date
 
 
 class Analysis:
     def __init__(self, company_id):
-        company = Companies.query.filter_by(id=company_id).first()
+        self.company = Companies.query.filter_by(id=company_id).first()
         self.company_id = company_id
-        self.company_dir = company.companyDir
+        self.company_dir = self.company.companyDir
 
     def save(self, data):
         with open(f'{Dir.get_analysis_path()}/{self.company_dir}/main.json', 'w') as fp:
@@ -21,12 +21,9 @@ class Analysis:
             data = json.load(fp)
         return data
 
-    def get_last_analysis_date(self):
-        pass
-
     def run(self, date):
         """
-        Обнволяет аналитические данные по дате в компании
+        Обновляет аналитические данные по дате в компании
         TODO при анализе очередного признака, данные прошлого будут стерты
         """
         def prepare_to_store(analysis, methods):
@@ -41,6 +38,9 @@ class Analysis:
 
         attrs_for_company = AttributesCompanies.query.filter_by(companyId=self.company_id).all()
         stored_report = self.get_report()
+        if not len(stored_report.keys()):
+            self.company.firstUpdate = date
+
         stored_report[date] = {
             'raw': {},
             'prepared': {},
@@ -78,15 +78,35 @@ class Analysis:
         )
 
         self.save(stored_report)
+        self.company.lastUpdate = date
+        db.session.commit()
+
+    def fill_empty_report(self):
+        for image in Dir.get_images(self.company_dir):
+            self.run(image.split('/').pop())
 
     def set_used_attributes(self, date):
         pass
+
+    def get_combined_attributes(self, date_from, date_to, period):
+        report = self.get_report()
+        combined = []
+
+        if period == 'weeks':
+            for date, analysis in report.items():
+                if get_date(date_from) <= get_date(date) <= get_date(date_to):
+                    point = {'name': date}
+                    point.update(analysis['combined'])
+                    combined.append(point)
+            return combined
+
+        return None
 
 
 if __name__ == '__main__':
     app = create_app()
     context = app.app_context()
     context.push()
-    Analysis(company_id=1).run('12.06.2021')
+    Analysis(company_id=1).fill_empty_report()
 
     context.pop()

@@ -1,4 +1,352 @@
 {
+    "15.05.2021": {
+        "raw": {
+            "instance_1": {
+                "gender": "Man",
+                "age": 29,
+                "emotion": {
+                    "angry": 0.0003801462068984487,
+                    "disgust": 1.748375410665715e-05,
+                    "fear": 0.06540137697669154,
+                    "happy": 99.13539871014333,
+                    "sad": 0.00025569679589537887,
+                    "surprise": 8.813016604753619e-06,
+                    "neutral": 0.7985399601232934
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_2": {
+                "gender": "Man",
+                "age": 21,
+                "emotion": {
+                    "angry": 29.033791538024957,
+                    "disgust": 1.549919416765044,
+                    "fear": 15.78442713207875,
+                    "happy": 0.006371574968275059,
+                    "sad": 49.93100763189702,
+                    "surprise": 0.14510470808166764,
+                    "neutral": 3.5493693739927563
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_3": {
+                "gender": "Man",
+                "age": 24,
+                "emotion": {
+                    "angry": 6.268783555088702e-05,
+                    "disgust": 1.7880099856182942e-08,
+                    "fear": 0.003639828208670025,
+                    "happy": 99.03256291345137,
+                    "sad": 0.04597498610839165,
+                    "surprise": 0.002461764926314778,
+                    "neutral": 0.9152988517462523
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_4": {
+                "gender": "Man",
+                "age": 27,
+                "emotion": {
+                    "angry": 1.017774259001537e-05,
+                    "disgust": 1.286140571850844e-09,
+                    "fear": 0.02643562596406776,
+                    "happy": 99.60535769398717,
+                    "sad": 1.7304339718871766e-05,
+                    "surprise": 0.009665016417045052,
+                    "neutral": 0.35850797231400344
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_5": {
+                "gender": "Man",
+                "age": 37,
+                "emotion": {
+                    "angry": 3.7171411781944386e-10,
+                    "disgust": 5.995598865043434e-22,
+                    "fear": 1.2868589344017137e-13,
+                    "happy": 99.99269247055054,
+                    "sad": 2.166545068349457e-09,
+                    "surprise": 8.324759215305733e-08,
+                    "neutral": 0.007307622581720352
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_6": {
+                "gender": "Man",
+                "age": 23,
+                "emotion": {
+                    "angry": 1.7782689458016656,
+                    "disgust": 0.00022351077308849752,
+                    "fear": 86.34491318671343,
+                    "happy": 5.537046364613717,
+                    "sad": 1.4356199425077336,
+                    "surprise": 0.000256509907041527,
+                    "neutral": 4.903676865162289
+                },
+                "dominant_emotion": "fear"
+            },
+            "instance_7": {
+                "gender": "Man",
+                "age": 25,
+                "emotion": {
+                    "angry": 27.806684374809265,
+                    "disgust": 0.000660530713503249,
+                    "fear": 0.7208329625427723,
+                    "happy": 0.880802609026432,
+                    "sad": 14.122191071510315,
+                    "surprise": 0.04475266905501485,
+                    "neutral": 56.42407536506653
+                },
+                "dominant_emotion": "neutral"
+            },
+            "instance_8": {
+                "gender": "Man",
+                "age": 40,
+                "emotion": {
+                    "angry": 8.055654383379743,
+                    "disgust": 0.05611013125823513,
+                    "fear": 0.6555614843143802,
+                    "happy": 18.487004159331818,
+                    "sad": 67.73711654390294,
+                    "surprise": 0.00024675476410506277,
+                    "neutral": 5.008313284315262
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_9": {
+                "gender": "Man",
+                "age": 39,
+                "emotion": {
+                    "angry": 2.0695876123966173e-07,
+                    "disgust": 1.3234655540714028e-18,
+                    "fear": 6.6999406240012e-11,
+                    "happy": 32.64643847942352,
+                    "sad": 0.00011299960078758886,
+                    "surprise": 1.8947887703291144e-08,
+                    "neutral": 67.35345125198364
+                },
+                "dominant_emotion": "neutral"
+            },
+            "instance_10": {
+                "gender": "Man",
+                "age": 23,
+                "emotion": {
+                    "angry": 5.5699508637189865,
+                    "disgust": 4.014241028471588e-06,
+                    "fear": 0.0017167778423754498,
+                    "happy": 10.801387578248978,
+                    "sad": 1.1513988487422466,
+                    "surprise": 0.011380822252249345,
+                    "neutral": 82.46415853500366
+                },
+                "dominant_emotion": "neutral"
+            }
+        },
+        "prepared": {
+            "gender": {
+                "Man": 10
+            },
+            "age": {
+                "30-40": 7,
+                "40-50": 3
+            },
+            "emotion": {
+                "happy": 4,
+                "sad": 2,
+                "fear": 1,
+                "neutral": 3
+            }
+        },
+        "combined": {
+            "gender": {
+                "value": 10,
+                "category": "Man"
+            },
+            "age": {
+                "value": 7,
+                "category": "30-40"
+            },
+            "emotion": {
+                "value": 4,
+                "category": "happy"
+            }
+        }
+    },
+    "22.05.2021": {
+        "raw": {
+            "instance_1": {
+                "gender": "Woman",
+                "age": 39,
+                "emotion": {
+                    "angry": 0.005974864681382979,
+                    "disgust": 6.550917976632909e-07,
+                    "fear": 8.20292208808196,
+                    "happy": 84.8981788693773,
+                    "sad": 6.8741608783102555,
+                    "surprise": 0.001990722494578212,
+                    "neutral": 0.016771391800948488
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_2": {
+                "gender": "Woman",
+                "age": 37,
+                "emotion": {
+                    "angry": 2.3341798471283816e-27,
+                    "disgust": 0.0,
+                    "fear": 5.069439563277415e-35,
+                    "happy": 100.0,
+                    "sad": 1.2347158443881946e-23,
+                    "surprise": 5.39346619801576e-13,
+                    "neutral": 1.1214021248054373e-10
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_3": {
+                "gender": "Woman",
+                "age": 35,
+                "emotion": {
+                    "angry": 7.297406012796159e-08,
+                    "disgust": 2.596566116687491e-12,
+                    "fear": 9.753821084146352e-08,
+                    "happy": 93.59577298164368,
+                    "sad": 2.7315032014030294e-06,
+                    "surprise": 0.0009031898116518278,
+                    "neutral": 6.403321027755737
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_4": {
+                "gender": "Man",
+                "age": 34,
+                "emotion": {
+                    "angry": 0.5068901460617781,
+                    "disgust": 1.4140418613806105e-05,
+                    "fear": 0.05072716739960015,
+                    "happy": 0.2913795644417405,
+                    "sad": 97.03848361968994,
+                    "surprise": 3.0044717824750933e-07,
+                    "neutral": 2.1125102415680885
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_5": {
+                "gender": "Man",
+                "age": 51,
+                "emotion": {
+                    "angry": 7.872792589697456e-08,
+                    "disgust": 2.732210760990775e-19,
+                    "fear": 7.807160697649935e-12,
+                    "happy": 99.69477061095589,
+                    "sad": 3.3050749305377566e-07,
+                    "surprise": 1.0231158344351219e-05,
+                    "neutral": 0.30521174048343414
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_6": {
+                "gender": "Man",
+                "age": 30,
+                "emotion": {
+                    "angry": 1.064123958349228,
+                    "disgust": 4.4971974944019166e-05,
+                    "fear": 25.213754177093506,
+                    "happy": 27.62354016304016,
+                    "sad": 18.484696745872498,
+                    "surprise": 0.21666462998837233,
+                    "neutral": 27.39717662334442
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_7": {
+                "gender": "Man",
+                "age": 35,
+                "emotion": {
+                    "angry": 0.0958410268485067,
+                    "disgust": 0.002539239964950629,
+                    "fear": 11.118319050274009,
+                    "happy": 0.02421138635924323,
+                    "sad": 86.15465925280341,
+                    "surprise": 9.518232106917168e-05,
+                    "neutral": 2.6043300206267808
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_8": {
+                "gender": "Man",
+                "age": 32,
+                "emotion": {
+                    "angry": 52.57289409637451,
+                    "disgust": 0.005305530066834763,
+                    "fear": 18.767860531806946,
+                    "happy": 1.2482033184824104e-07,
+                    "sad": 28.6481112241745,
+                    "surprise": 1.0255409854664777e-06,
+                    "neutral": 0.005834169132867828
+                },
+                "dominant_emotion": "angry"
+            },
+            "instance_9": {
+                "gender": "Man",
+                "age": 23,
+                "emotion": {
+                    "angry": 0.2906054491177201,
+                    "disgust": 2.2029680597085433e-10,
+                    "fear": 0.00021089103938720655,
+                    "happy": 0.012678145139943808,
+                    "sad": 99.41914677619934,
+                    "surprise": 1.2844145658164052e-05,
+                    "neutral": 0.27734723407775164
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_10": {
+                "gender": "Woman",
+                "age": 41,
+                "emotion": {
+                    "angry": 1.829431681699134e-05,
+                    "disgust": 7.130576684666323e-09,
+                    "fear": 1.040487363934517,
+                    "happy": 0.011859518417622894,
+                    "sad": 93.86646151542664,
+                    "surprise": 4.8831293497642037e-05,
+                    "neutral": 5.08112907409668
+                },
+                "dominant_emotion": "sad"
+            }
+        },
+        "prepared": {
+            "gender": {
+                "Woman": 4,
+                "Man": 6
+            },
+            "age": {
+                "40-50": 6,
+                "60-70": 1,
+                "30-40": 2,
+                "50-60": 1
+            },
+            "emotion": {
+                "happy": 5,
+                "sad": 4,
+                "angry": 1
+            }
+        },
+        "combined": {
+            "gender": {
+                "value": 6,
+                "category": "Man"
+            },
+            "age": {
+                "value": 6,
+                "category": "40-50"
+            },
+            "emotion": {
+                "value": 5,
+                "category": "happy"
+            }
+        }
+    },
     "10.04.2021": {
         "raw": {
             "instance_1": {
@@ -159,195 +507,20 @@
                 "fear": 1
             }
         },
-        "combined": [
-            {
+        "combined": {
+            "gender": {
                 "value": 8,
                 "category": "Man"
             },
-            {
+            "age": {
                 "value": 7,
                 "category": "40-50"
-            },
-            {
-                "value": 6,
-                "category": "happy"
-            }
-        ]
-    },
-    "17.04.2021": {
-        "raw": {
-            "instance_1": {
-                "gender": "Woman",
-                "age": 33,
-                "emotion": {
-                    "angry": 3.4801022473069564e-08,
-                    "disgust": 1.5398695606987006e-10,
-                    "fear": 6.23504507440024e-08,
-                    "happy": 99.93653297046023,
-                    "sad": 0.00147241853164489,
-                    "surprise": 1.3812000110609135e-09,
-                    "neutral": 0.06199237910798962
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_2": {
-                "gender": "Man",
-                "age": 34,
-                "emotion": {
-                    "angry": 0.0002901273892599212,
-                    "disgust": 2.20473817416018e-10,
-                    "fear": 7.161253694414072e-09,
-                    "happy": 97.84963105316533,
-                    "sad": 0.00022750044065009,
-                    "surprise": 1.9553243579288385e-07,
-                    "neutral": 2.149850200098777
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_3": {
-                "gender": "Woman",
-                "age": 31,
-                "emotion": {
-                    "angry": 22.345101833343506,
-                    "disgust": 0.0008216593414545059,
-                    "fear": 0.17154780216515064,
-                    "happy": 1.3012094423174858,
-                    "sad": 54.14286255836487,
-                    "surprise": 0.03821639402303845,
-                    "neutral": 22.00023978948593
-                },
-                "dominant_emotion": "sad"
-            },
-            "instance_4": {
-                "gender": "Man",
-                "age": 32,
-                "emotion": {
-                    "angry": 10.300076621775426,
-                    "disgust": 3.4672586869921954e-06,
-                    "fear": 0.0014175903678762573,
-                    "happy": 86.28321208257748,
-                    "sad": 1.9885215230894997,
-                    "surprise": 0.0008871307346807951,
-                    "neutral": 1.4258810237575188
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_5": {
-                "gender": "Man",
-                "age": 42,
-                "emotion": {
-                    "angry": 4.3548121380666827e-11,
-                    "disgust": 2.963937285781699e-17,
-                    "fear": 1.6559200028982285e-11,
-                    "happy": 99.9991774559021,
-                    "sad": 1.2043991021518097e-10,
-                    "surprise": 4.060749674884845e-11,
-                    "neutral": 0.0008265752512670588
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_6": {
-                "gender": "Man",
-                "age": 26,
-                "emotion": {
-                    "angry": 6.035983189940453,
-                    "disgust": 0.0028013619157718495,
-                    "fear": 3.0026867985725403,
-                    "happy": 0.295095331966877,
-                    "sad": 20.93970477581024,
-                    "surprise": 2.776743471622467,
-                    "neutral": 66.94698333740234
-                },
-                "dominant_emotion": "neutral"
-            },
-            "instance_7": {
-                "gender": "Man",
-                "age": 36,
-                "emotion": {
-                    "angry": 0.6472953129559755,
-                    "disgust": 3.0943840823027813e-07,
-                    "fear": 2.0983707159757614,
-                    "happy": 0.0002477792577337823,
-                    "sad": 6.461740285158157,
-                    "surprise": 4.236709827409868e-06,
-                    "neutral": 90.79234600067139
-                },
-                "dominant_emotion": "neutral"
-            },
-            "instance_8": {
-                "gender": "Man",
-                "age": 25,
-                "emotion": {
-                    "angry": 3.865401651103467e-12,
-                    "disgust": 2.3981621982056167e-22,
-                    "fear": 1.6738601468906147e-16,
-                    "happy": 99.9082088470459,
-                    "sad": 5.577236589227041e-10,
-                    "surprise": 1.431678907370948e-09,
-                    "neutral": 0.09178952896036208
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_9": {
-                "gender": "Man",
-                "age": 26,
-                "emotion": {
-                    "angry": 98.63153687903505,
-                    "disgust": 1.3304662165634762e-06,
-                    "fear": 0.002546747934414882,
-                    "happy": 0.10487412261957661,
-                    "sad": 1.1195117343671164,
-                    "surprise": 4.587261399931732e-08,
-                    "neutral": 0.1415303294155198
-                },
-                "dominant_emotion": "angry"
-            },
-            "instance_10": {
-                "gender": "Woman",
-                "age": 34,
-                "emotion": {
-                    "angry": 0.8810242637991905,
-                    "disgust": 1.167337515539657e-06,
-                    "fear": 5.777158215641975,
-                    "happy": 0.01914872700581327,
-                    "sad": 3.0401328578591347,
-                    "surprise": 0.003996073064627126,
-                    "neutral": 90.27854204177856
-                },
-                "dominant_emotion": "neutral"
-            }
-        },
-        "prepared": {
-            "gender": {
-                "Woman": 3,
-                "Man": 7
-            },
-            "age": {
-                "40-50": 6,
-                "50-60": 1,
-                "30-40": 3
             },
             "emotion": {
-                "happy": 5,
-                "sad": 1,
-                "neutral": 3,
-                "angry": 1
-            }
-        },
-        "combined": [
-            {
-                "value": 7,
-                "category": "Man"
-            },
-            {
                 "value": 6,
-                "category": "40-50"
-            },
-            {
-                "value": 5,
                 "category": "happy"
             }
-        ]
+        }
     },
     "24.04.2021": {
         "raw": {
@@ -510,193 +683,20 @@
                 "angry": 1
             }
         },
-        "combined": [
-            {
+        "combined": {
+            "gender": {
                 "value": 8,
                 "category": "Man"
             },
-            {
+            "age": {
                 "value": 6,
                 "category": "40-50"
             },
-            {
+            "emotion": {
                 "value": 4,
                 "category": "happy"
             }
-        ]
-    },
-    "01.05.2021": {
-        "raw": {
-            "instance_1": {
-                "gender": "Man",
-                "age": 33,
-                "emotion": {
-                    "angry": 0.0005473453968610049,
-                    "disgust": 1.357312655891522e-07,
-                    "fear": 6.128556295805419,
-                    "happy": 82.75913205633974,
-                    "sad": 11.111639605565118,
-                    "surprise": 4.368916263087983e-07,
-                    "neutral": 0.00011937639497145679
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_2": {
-                "gender": "Woman",
-                "age": 34,
-                "emotion": {
-                    "angry": 6.975313348268449e-12,
-                    "disgust": 3.8644281721682306e-21,
-                    "fear": 2.4699393275674497e-13,
-                    "happy": 99.91379379712306,
-                    "sad": 3.975763844196396e-08,
-                    "surprise": 3.8629851621867906e-09,
-                    "neutral": 0.08620584781018482
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_3": {
-                "gender": "Man",
-                "age": 37,
-                "emotion": {
-                    "angry": 1.2876586907850651e-06,
-                    "disgust": 1.38514105242106e-11,
-                    "fear": 7.019219649961883e-08,
-                    "happy": 99.95205402374268,
-                    "sad": 3.3926518483440304e-06,
-                    "surprise": 7.300198223703092e-08,
-                    "neutral": 0.047942172386683524
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_4": {
-                "gender": "Woman",
-                "age": 33,
-                "emotion": {
-                    "angry": 7.202320665803722e-05,
-                    "disgust": 5.2833584088766035e-09,
-                    "fear": 0.00112207858098653,
-                    "happy": 99.98718499984562,
-                    "sad": 0.000643926691191845,
-                    "surprise": 0.0030604522190875224,
-                    "neutral": 0.007921948634562479
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_5": {
-                "gender": "Woman",
-                "age": 33,
-                "emotion": {
-                    "angry": 6.957751304906478e-12,
-                    "disgust": 2.7943484307878256e-18,
-                    "fear": 2.870715988945606e-10,
-                    "happy": 99.98305439848032,
-                    "sad": 1.0727134403985698e-08,
-                    "surprise": 2.3308274478665522e-07,
-                    "neutral": 0.016947747927304233
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_6": {
-                "gender": "Man",
-                "age": 37,
-                "emotion": {
-                    "angry": 9.101974138584976e-12,
-                    "disgust": 5.599618064095897e-21,
-                    "fear": 2.7323595165276325e-13,
-                    "happy": 99.95771050453186,
-                    "sad": 5.531248375989506e-09,
-                    "surprise": 5.1329567440916435e-05,
-                    "neutral": 0.04224043805152178
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_7": {
-                "gender": "Man",
-                "age": 34,
-                "emotion": {
-                    "angry": 0.01483317610109225,
-                    "disgust": 2.6859856561145534e-07,
-                    "fear": 2.0616135998352547e-05,
-                    "happy": 98.59678149223328,
-                    "sad": 0.018724106485024095,
-                    "surprise": 0.000530304077983601,
-                    "neutral": 1.3691183179616928
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_8": {
-                "gender": "Man",
-                "age": 25,
-                "emotion": {
-                    "angry": 3.602758049964905,
-                    "disgust": 1.874530113354922e-05,
-                    "fear": 11.747587472200394,
-                    "happy": 1.6443751752376556,
-                    "sad": 83.00448060035706,
-                    "surprise": 6.337595781502614e-07,
-                    "neutral": 0.0007790066774759907
-                },
-                "dominant_emotion": "sad"
-            },
-            "instance_9": {
-                "gender": "Woman",
-                "age": 35,
-                "emotion": {
-                    "angry": 5.861624785552522e-06,
-                    "disgust": 8.019633405704357e-12,
-                    "fear": 4.075980442053151e-06,
-                    "happy": 99.32842254638672,
-                    "sad": 0.024548126384615898,
-                    "surprise": 3.263825476551574e-05,
-                    "neutral": 0.6469892337918282
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_10": {
-                "gender": "Man",
-                "age": 25,
-                "emotion": {
-                    "angry": 0.1406929106451571,
-                    "disgust": 2.882022176464716e-07,
-                    "fear": 9.937643881130498e-05,
-                    "happy": 0.35634892992675304,
-                    "sad": 3.8691584020853043,
-                    "surprise": 1.3013838895403751e-05,
-                    "neutral": 95.63368558883667
-                },
-                "dominant_emotion": "neutral"
-            }
-        },
-        "prepared": {
-            "gender": {
-                "Man": 6,
-                "Woman": 4
-            },
-            "age": {
-                "40-50": 8,
-                "30-40": 2
-            },
-            "emotion": {
-                "happy": 8,
-                "sad": 1,
-                "neutral": 1
-            }
-        },
-        "combined": [
-            {
-                "value": 6,
-                "category": "Man"
-            },
-            {
-                "value": 8,
-                "category": "40-50"
-            },
-            {
-                "value": 8,
-                "category": "happy"
-            }
-        ]
+        }
     },
     "08.05.2021": {
         "raw": {
@@ -857,368 +857,192 @@
                 "fear": 1
             }
         },
-        "combined": [
-            {
+        "combined": {
+            "gender": {
                 "value": 8,
                 "category": "Man"
-            },
-            {
-                "value": 8,
-                "category": "30-40"
-            },
-            {
-                "value": 8,
-                "category": "happy"
-            }
-        ]
-    },
-    "15.05.2021": {
-        "raw": {
-            "instance_1": {
-                "gender": "Man",
-                "age": 29,
-                "emotion": {
-                    "angry": 0.0003801462068984487,
-                    "disgust": 1.748375410665715e-05,
-                    "fear": 0.06540137697669154,
-                    "happy": 99.13539871014333,
-                    "sad": 0.00025569679589537887,
-                    "surprise": 8.813016604753619e-06,
-                    "neutral": 0.7985399601232934
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_2": {
-                "gender": "Man",
-                "age": 21,
-                "emotion": {
-                    "angry": 29.033791538024957,
-                    "disgust": 1.549919416765044,
-                    "fear": 15.78442713207875,
-                    "happy": 0.006371574968275059,
-                    "sad": 49.93100763189702,
-                    "surprise": 0.14510470808166764,
-                    "neutral": 3.5493693739927563
-                },
-                "dominant_emotion": "sad"
-            },
-            "instance_3": {
-                "gender": "Man",
-                "age": 24,
-                "emotion": {
-                    "angry": 6.268783555088702e-05,
-                    "disgust": 1.7880099856182942e-08,
-                    "fear": 0.003639828208670025,
-                    "happy": 99.03256291345137,
-                    "sad": 0.04597498610839165,
-                    "surprise": 0.002461764926314778,
-                    "neutral": 0.9152988517462523
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_4": {
-                "gender": "Man",
-                "age": 27,
-                "emotion": {
-                    "angry": 1.017774259001537e-05,
-                    "disgust": 1.286140571850844e-09,
-                    "fear": 0.02643562596406776,
-                    "happy": 99.60535769398717,
-                    "sad": 1.7304339718871766e-05,
-                    "surprise": 0.009665016417045052,
-                    "neutral": 0.35850797231400344
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_5": {
-                "gender": "Man",
-                "age": 37,
-                "emotion": {
-                    "angry": 3.7171411781944386e-10,
-                    "disgust": 5.995598865043434e-22,
-                    "fear": 1.2868589344017137e-13,
-                    "happy": 99.99269247055054,
-                    "sad": 2.166545068349457e-09,
-                    "surprise": 8.324759215305733e-08,
-                    "neutral": 0.007307622581720352
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_6": {
-                "gender": "Man",
-                "age": 23,
-                "emotion": {
-                    "angry": 1.7782689458016656,
-                    "disgust": 0.00022351077308849752,
-                    "fear": 86.34491318671343,
-                    "happy": 5.537046364613717,
-                    "sad": 1.4356199425077336,
-                    "surprise": 0.000256509907041527,
-                    "neutral": 4.903676865162289
-                },
-                "dominant_emotion": "fear"
-            },
-            "instance_7": {
-                "gender": "Man",
-                "age": 25,
-                "emotion": {
-                    "angry": 27.806684374809265,
-                    "disgust": 0.000660530713503249,
-                    "fear": 0.7208329625427723,
-                    "happy": 0.880802609026432,
-                    "sad": 14.122191071510315,
-                    "surprise": 0.04475266905501485,
-                    "neutral": 56.42407536506653
-                },
-                "dominant_emotion": "neutral"
-            },
-            "instance_8": {
-                "gender": "Man",
-                "age": 40,
-                "emotion": {
-                    "angry": 8.055654383379743,
-                    "disgust": 0.05611013125823513,
-                    "fear": 0.6555614843143802,
-                    "happy": 18.487004159331818,
-                    "sad": 67.73711654390294,
-                    "surprise": 0.00024675476410506277,
-                    "neutral": 5.008313284315262
-                },
-                "dominant_emotion": "sad"
-            },
-            "instance_9": {
-                "gender": "Man",
-                "age": 39,
-                "emotion": {
-                    "angry": 2.0695876123966173e-07,
-                    "disgust": 1.3234655540714028e-18,
-                    "fear": 6.6999406240012e-11,
-                    "happy": 32.64643847942352,
-                    "sad": 0.00011299960078758886,
-                    "surprise": 1.8947887703291144e-08,
-                    "neutral": 67.35345125198364
-                },
-                "dominant_emotion": "neutral"
-            },
-            "instance_10": {
-                "gender": "Man",
-                "age": 23,
-                "emotion": {
-                    "angry": 5.5699508637189865,
-                    "disgust": 4.014241028471588e-06,
-                    "fear": 0.0017167778423754498,
-                    "happy": 10.801387578248978,
-                    "sad": 1.1513988487422466,
-                    "surprise": 0.011380822252249345,
-                    "neutral": 82.46415853500366
-                },
-                "dominant_emotion": "neutral"
-            }
-        },
-        "prepared": {
-            "gender": {
-                "Man": 10
             },
             "age": {
-                "30-40": 7,
-                "40-50": 3
-            },
-            "emotion": {
-                "happy": 4,
-                "sad": 2,
-                "fear": 1,
-                "neutral": 3
-            }
-        },
-        "combined": [
-            {
-                "value": 10,
-                "category": "Man"
-            },
-            {
-                "value": 7,
+                "value": 8,
                 "category": "30-40"
             },
-            {
-                "value": 4,
+            "emotion": {
+                "value": 8,
                 "category": "happy"
             }
-        ]
+        }
     },
-    "22.05.2021": {
+    "05.06.2021": {
         "raw": {
             "instance_1": {
-                "gender": "Woman",
-                "age": 39,
+                "gender": "Man",
+                "age": 28,
                 "emotion": {
-                    "angry": 0.005974864681382979,
-                    "disgust": 6.550917976632909e-07,
-                    "fear": 8.20292208808196,
-                    "happy": 84.8981788693773,
-                    "sad": 6.8741608783102555,
-                    "surprise": 0.001990722494578212,
-                    "neutral": 0.016771391800948488
+                    "angry": 0.003056167406612076,
+                    "disgust": 3.452245778134966e-05,
+                    "fear": 0.3136849496513605,
+                    "happy": 38.3660227060318,
+                    "sad": 2.3444723337888718,
+                    "surprise": 0.0036302961234468967,
+                    "neutral": 58.96909832954407
                 },
-                "dominant_emotion": "happy"
+                "dominant_emotion": "neutral"
             },
             "instance_2": {
-                "gender": "Woman",
-                "age": 37,
-                "emotion": {
-                    "angry": 2.3341798471283816e-27,
-                    "disgust": 0.0,
-                    "fear": 5.069439563277415e-35,
-                    "happy": 100.0,
-                    "sad": 1.2347158443881946e-23,
-                    "surprise": 5.39346619801576e-13,
-                    "neutral": 1.1214021248054373e-10
-                },
-                "dominant_emotion": "happy"
-            },
-            "instance_3": {
-                "gender": "Woman",
+                "gender": "Man",
                 "age": 35,
                 "emotion": {
-                    "angry": 7.297406012796159e-08,
-                    "disgust": 2.596566116687491e-12,
-                    "fear": 9.753821084146352e-08,
-                    "happy": 93.59577298164368,
-                    "sad": 2.7315032014030294e-06,
-                    "surprise": 0.0009031898116518278,
-                    "neutral": 6.403321027755737
+                    "angry": 0.0006996145202720072,
+                    "disgust": 2.1394787796859965e-11,
+                    "fear": 0.00025151919089694275,
+                    "happy": 0.0019432105546002276,
+                    "sad": 0.025493605062365532,
+                    "surprise": 1.1593035864621015e-06,
+                    "neutral": 99.97161030769348
+                },
+                "dominant_emotion": "neutral"
+            },
+            "instance_3": {
+                "gender": "Man",
+                "age": 33,
+                "emotion": {
+                    "angry": 1.1850009836376764e-15,
+                    "disgust": 3.5171437046179357e-23,
+                    "fear": 1.2337152451371998e-16,
+                    "happy": 99.91479515521497,
+                    "sad": 4.093977571305304e-10,
+                    "surprise": 1.6880671045048785e-10,
+                    "neutral": 0.0852042801706809
                 },
                 "dominant_emotion": "happy"
             },
             "instance_4": {
-                "gender": "Man",
-                "age": 34,
+                "gender": "Woman",
+                "age": 28,
                 "emotion": {
-                    "angry": 0.5068901460617781,
-                    "disgust": 1.4140418613806105e-05,
-                    "fear": 0.05072716739960015,
-                    "happy": 0.2913795644417405,
-                    "sad": 97.03848361968994,
-                    "surprise": 3.0044717824750933e-07,
-                    "neutral": 2.1125102415680885
-                },
-                "dominant_emotion": "sad"
-            },
-            "instance_5": {
-                "gender": "Man",
-                "age": 51,
-                "emotion": {
-                    "angry": 7.872792589697456e-08,
-                    "disgust": 2.732210760990775e-19,
-                    "fear": 7.807160697649935e-12,
-                    "happy": 99.69477061095589,
-                    "sad": 3.3050749305377566e-07,
-                    "surprise": 1.0231158344351219e-05,
-                    "neutral": 0.30521174048343414
+                    "angry": 1.314766393534228e-05,
+                    "disgust": 9.726223190557881e-12,
+                    "fear": 7.863877604652458e-09,
+                    "happy": 99.9995231628418,
+                    "sad": 5.648967160709617e-06,
+                    "surprise": 3.1543754275276115e-07,
+                    "neutral": 0.0004642164640245028
                 },
                 "dominant_emotion": "happy"
             },
-            "instance_6": {
+            "instance_5": {
                 "gender": "Man",
                 "age": 30,
                 "emotion": {
-                    "angry": 1.064123958349228,
-                    "disgust": 4.4971974944019166e-05,
-                    "fear": 25.213754177093506,
-                    "happy": 27.62354016304016,
-                    "sad": 18.484696745872498,
-                    "surprise": 0.21666462998837233,
-                    "neutral": 27.39717662334442
+                    "angry": 0.4548657685518265,
+                    "disgust": 2.1530806026959226e-07,
+                    "fear": 0.03366151358932257,
+                    "happy": 0.021113429102115333,
+                    "sad": 0.3867306746542454,
+                    "surprise": 0.0004862063633481739,
+                    "neutral": 99.10314083099365
                 },
-                "dominant_emotion": "happy"
+                "dominant_emotion": "neutral"
+            },
+            "instance_6": {
+                "gender": "Woman",
+                "age": 33,
+                "emotion": {
+                    "angry": 1.0118229314684868,
+                    "disgust": 2.2887157058448793e-05,
+                    "fear": 4.541991278529167,
+                    "happy": 0.0028158210625406355,
+                    "sad": 12.536028027534485,
+                    "surprise": 0.02672427799552679,
+                    "neutral": 81.88059329986572
+                },
+                "dominant_emotion": "neutral"
             },
             "instance_7": {
                 "gender": "Man",
-                "age": 35,
+                "age": 31,
                 "emotion": {
-                    "angry": 0.0958410268485067,
-                    "disgust": 0.002539239964950629,
-                    "fear": 11.118319050274009,
-                    "happy": 0.02421138635924323,
-                    "sad": 86.15465925280341,
-                    "surprise": 9.518232106917168e-05,
-                    "neutral": 2.6043300206267808
+                    "angry": 2.8375016525387764,
+                    "disgust": 8.369531201424252e-06,
+                    "fear": 0.0008312965292134322,
+                    "happy": 0.6099259946495295,
+                    "sad": 1.0112316347658634,
+                    "surprise": 0.0015890322174527682,
+                    "neutral": 95.5389142036438
                 },
-                "dominant_emotion": "sad"
+                "dominant_emotion": "neutral"
             },
             "instance_8": {
-                "gender": "Man",
-                "age": 32,
+                "gender": "Woman",
+                "age": 30,
                 "emotion": {
-                    "angry": 52.57289409637451,
-                    "disgust": 0.005305530066834763,
-                    "fear": 18.767860531806946,
-                    "happy": 1.2482033184824104e-07,
-                    "sad": 28.6481112241745,
-                    "surprise": 1.0255409854664777e-06,
-                    "neutral": 0.005834169132867828
+                    "angry": 2.88964858985441e-09,
+                    "disgust": 1.0544957902432524e-17,
+                    "fear": 1.7160576345348622e-10,
+                    "happy": 99.99794960021973,
+                    "sad": 1.376033367250784e-05,
+                    "surprise": 9.811873129305163e-12,
+                    "neutral": 0.002044200482487213
                 },
-                "dominant_emotion": "angry"
+                "dominant_emotion": "happy"
             },
             "instance_9": {
-                "gender": "Man",
-                "age": 23,
+                "gender": "Woman",
+                "age": 30,
                 "emotion": {
-                    "angry": 0.2906054491177201,
-                    "disgust": 2.2029680597085433e-10,
-                    "fear": 0.00021089103938720655,
-                    "happy": 0.012678145139943808,
-                    "sad": 99.41914677619934,
-                    "surprise": 1.2844145658164052e-05,
-                    "neutral": 0.27734723407775164
+                    "angry": 4.851091528479401e-07,
+                    "disgust": 2.286932088919498e-17,
+                    "fear": 4.768065716559411e-10,
+                    "happy": 99.63065385818481,
+                    "sad": 6.825111995567568e-05,
+                    "surprise": 0.0002625435854497482,
+                    "neutral": 0.36901840940117836
                 },
-                "dominant_emotion": "sad"
+                "dominant_emotion": "happy"
             },
             "instance_10": {
-                "gender": "Woman",
-                "age": 41,
+                "gender": "Man",
+                "age": 39,
                 "emotion": {
-                    "angry": 1.829431681699134e-05,
-                    "disgust": 7.130576684666323e-09,
-                    "fear": 1.040487363934517,
-                    "happy": 0.011859518417622894,
-                    "sad": 93.86646151542664,
-                    "surprise": 4.8831293497642037e-05,
-                    "neutral": 5.08112907409668
+                    "angry": 15.550728142261505,
+                    "disgust": 0.07499434286728501,
+                    "fear": 6.4767807722091675,
+                    "happy": 1.0141298174858093,
+                    "sad": 26.39138102531433,
+                    "surprise": 1.460129301995039,
+                    "neutral": 49.03185963630676
                 },
-                "dominant_emotion": "sad"
+                "dominant_emotion": "neutral"
             }
         },
         "prepared": {
             "gender": {
-                "Woman": 4,
-                "Man": 6
+                "Man": 6,
+                "Woman": 4
             },
             "age": {
-                "40-50": 6,
-                "60-70": 1,
-                "30-40": 2,
-                "50-60": 1
+                "30-40": 5,
+                "40-50": 5
             },
             "emotion": {
-                "happy": 5,
-                "sad": 4,
-                "angry": 1
+                "neutral": 6,
+                "happy": 4
             }
         },
-        "combined": [
-            {
+        "combined": {
+            "gender": {
                 "value": 6,
                 "category": "Man"
             },
-            {
-                "value": 6,
+            "age": {
+                "value": 5,
                 "category": "40-50"
             },
-            {
-                "value": 5,
-                "category": "happy"
+            "emotion": {
+                "value": 6,
+                "category": "neutral"
             }
-        ]
+        }
     },
     "29.05.2021": {
         "raw": {
@@ -1378,192 +1202,195 @@
                 "neutral": 3
             }
         },
-        "combined": [
-            {
+        "combined": {
+            "gender": {
                 "value": 5,
                 "category": "Woman"
             },
-            {
+            "age": {
                 "value": 6,
                 "category": "30-40"
             },
-            {
+            "emotion": {
                 "value": 6,
                 "category": "happy"
             }
-        ]
+        }
     },
-    "05.06.2021": {
+    "17.04.2021": {
         "raw": {
             "instance_1": {
-                "gender": "Man",
-                "age": 28,
-                "emotion": {
-                    "angry": 0.003056167406612076,
-                    "disgust": 3.452245778134966e-05,
-                    "fear": 0.3136849496513605,
-                    "happy": 38.3660227060318,
-                    "sad": 2.3444723337888718,
-                    "surprise": 0.0036302961234468967,
-                    "neutral": 58.96909832954407
-                },
-                "dominant_emotion": "neutral"
-            },
-            "instance_2": {
-                "gender": "Man",
-                "age": 35,
-                "emotion": {
-                    "angry": 0.0006996145202720072,
-                    "disgust": 2.1394787796859965e-11,
-                    "fear": 0.00025151919089694275,
-                    "happy": 0.0019432105546002276,
-                    "sad": 0.025493605062365532,
-                    "surprise": 1.1593035864621015e-06,
-                    "neutral": 99.97161030769348
-                },
-                "dominant_emotion": "neutral"
-            },
-            "instance_3": {
-                "gender": "Man",
+                "gender": "Woman",
                 "age": 33,
                 "emotion": {
-                    "angry": 1.1850009836376764e-15,
-                    "disgust": 3.5171437046179357e-23,
-                    "fear": 1.2337152451371998e-16,
-                    "happy": 99.91479515521497,
-                    "sad": 4.093977571305304e-10,
-                    "surprise": 1.6880671045048785e-10,
-                    "neutral": 0.0852042801706809
+                    "angry": 3.4801022473069564e-08,
+                    "disgust": 1.5398695606987006e-10,
+                    "fear": 6.23504507440024e-08,
+                    "happy": 99.93653297046023,
+                    "sad": 0.00147241853164489,
+                    "surprise": 1.3812000110609135e-09,
+                    "neutral": 0.06199237910798962
                 },
                 "dominant_emotion": "happy"
             },
-            "instance_4": {
-                "gender": "Woman",
-                "age": 28,
+            "instance_2": {
+                "gender": "Man",
+                "age": 34,
                 "emotion": {
-                    "angry": 1.314766393534228e-05,
-                    "disgust": 9.726223190557881e-12,
-                    "fear": 7.863877604652458e-09,
-                    "happy": 99.9995231628418,
-                    "sad": 5.648967160709617e-06,
-                    "surprise": 3.1543754275276115e-07,
-                    "neutral": 0.0004642164640245028
+                    "angry": 0.0002901273892599212,
+                    "disgust": 2.20473817416018e-10,
+                    "fear": 7.161253694414072e-09,
+                    "happy": 97.84963105316533,
+                    "sad": 0.00022750044065009,
+                    "surprise": 1.9553243579288385e-07,
+                    "neutral": 2.149850200098777
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_3": {
+                "gender": "Woman",
+                "age": 31,
+                "emotion": {
+                    "angry": 22.345101833343506,
+                    "disgust": 0.0008216593414545059,
+                    "fear": 0.17154780216515064,
+                    "happy": 1.3012094423174858,
+                    "sad": 54.14286255836487,
+                    "surprise": 0.03821639402303845,
+                    "neutral": 22.00023978948593
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_4": {
+                "gender": "Man",
+                "age": 32,
+                "emotion": {
+                    "angry": 10.300076621775426,
+                    "disgust": 3.4672586869921954e-06,
+                    "fear": 0.0014175903678762573,
+                    "happy": 86.28321208257748,
+                    "sad": 1.9885215230894997,
+                    "surprise": 0.0008871307346807951,
+                    "neutral": 1.4258810237575188
                 },
                 "dominant_emotion": "happy"
             },
             "instance_5": {
                 "gender": "Man",
-                "age": 30,
+                "age": 42,
                 "emotion": {
-                    "angry": 0.4548657685518265,
-                    "disgust": 2.1530806026959226e-07,
-                    "fear": 0.03366151358932257,
-                    "happy": 0.021113429102115333,
-                    "sad": 0.3867306746542454,
-                    "surprise": 0.0004862063633481739,
-                    "neutral": 99.10314083099365
+                    "angry": 4.3548121380666827e-11,
+                    "disgust": 2.963937285781699e-17,
+                    "fear": 1.6559200028982285e-11,
+                    "happy": 99.9991774559021,
+                    "sad": 1.2043991021518097e-10,
+                    "surprise": 4.060749674884845e-11,
+                    "neutral": 0.0008265752512670588
                 },
-                "dominant_emotion": "neutral"
+                "dominant_emotion": "happy"
             },
             "instance_6": {
-                "gender": "Woman",
-                "age": 33,
+                "gender": "Man",
+                "age": 26,
                 "emotion": {
-                    "angry": 1.0118229314684868,
-                    "disgust": 2.2887157058448793e-05,
-                    "fear": 4.541991278529167,
-                    "happy": 0.0028158210625406355,
-                    "sad": 12.536028027534485,
-                    "surprise": 0.02672427799552679,
-                    "neutral": 81.88059329986572
+                    "angry": 6.035983189940453,
+                    "disgust": 0.0028013619157718495,
+                    "fear": 3.0026867985725403,
+                    "happy": 0.295095331966877,
+                    "sad": 20.93970477581024,
+                    "surprise": 2.776743471622467,
+                    "neutral": 66.94698333740234
                 },
                 "dominant_emotion": "neutral"
             },
             "instance_7": {
                 "gender": "Man",
-                "age": 31,
+                "age": 36,
                 "emotion": {
-                    "angry": 2.8375016525387764,
-                    "disgust": 8.369531201424252e-06,
-                    "fear": 0.0008312965292134322,
-                    "happy": 0.6099259946495295,
-                    "sad": 1.0112316347658634,
-                    "surprise": 0.0015890322174527682,
-                    "neutral": 95.5389142036438
+                    "angry": 0.6472953129559755,
+                    "disgust": 3.0943840823027813e-07,
+                    "fear": 2.0983707159757614,
+                    "happy": 0.0002477792577337823,
+                    "sad": 6.461740285158157,
+                    "surprise": 4.236709827409868e-06,
+                    "neutral": 90.79234600067139
                 },
                 "dominant_emotion": "neutral"
             },
             "instance_8": {
-                "gender": "Woman",
-                "age": 30,
+                "gender": "Man",
+                "age": 25,
                 "emotion": {
-                    "angry": 2.88964858985441e-09,
-                    "disgust": 1.0544957902432524e-17,
-                    "fear": 1.7160576345348622e-10,
-                    "happy": 99.99794960021973,
-                    "sad": 1.376033367250784e-05,
-                    "surprise": 9.811873129305163e-12,
-                    "neutral": 0.002044200482487213
+                    "angry": 3.865401651103467e-12,
+                    "disgust": 2.3981621982056167e-22,
+                    "fear": 1.6738601468906147e-16,
+                    "happy": 99.9082088470459,
+                    "sad": 5.577236589227041e-10,
+                    "surprise": 1.431678907370948e-09,
+                    "neutral": 0.09178952896036208
                 },
                 "dominant_emotion": "happy"
             },
             "instance_9": {
-                "gender": "Woman",
-                "age": 30,
+                "gender": "Man",
+                "age": 26,
                 "emotion": {
-                    "angry": 4.851091528479401e-07,
-                    "disgust": 2.286932088919498e-17,
-                    "fear": 4.768065716559411e-10,
-                    "happy": 99.63065385818481,
-                    "sad": 6.825111995567568e-05,
-                    "surprise": 0.0002625435854497482,
-                    "neutral": 0.36901840940117836
+                    "angry": 98.63153687903505,
+                    "disgust": 1.3304662165634762e-06,
+                    "fear": 0.002546747934414882,
+                    "happy": 0.10487412261957661,
+                    "sad": 1.1195117343671164,
+                    "surprise": 4.587261399931732e-08,
+                    "neutral": 0.1415303294155198
                 },
-                "dominant_emotion": "happy"
+                "dominant_emotion": "angry"
             },
             "instance_10": {
-                "gender": "Man",
-                "age": 39,
+                "gender": "Woman",
+                "age": 34,
                 "emotion": {
-                    "angry": 15.550728142261505,
-                    "disgust": 0.07499434286728501,
-                    "fear": 6.4767807722091675,
-                    "happy": 1.0141298174858093,
-                    "sad": 26.39138102531433,
-                    "surprise": 1.460129301995039,
-                    "neutral": 49.03185963630676
+                    "angry": 0.8810242637991905,
+                    "disgust": 1.167337515539657e-06,
+                    "fear": 5.777158215641975,
+                    "happy": 0.01914872700581327,
+                    "sad": 3.0401328578591347,
+                    "surprise": 0.003996073064627126,
+                    "neutral": 90.27854204177856
                 },
                 "dominant_emotion": "neutral"
             }
         },
         "prepared": {
             "gender": {
-                "Man": 6,
-                "Woman": 4
+                "Woman": 3,
+                "Man": 7
             },
             "age": {
-                "30-40": 5,
-                "40-50": 5
+                "40-50": 6,
+                "50-60": 1,
+                "30-40": 3
             },
             "emotion": {
-                "neutral": 6,
-                "happy": 4
+                "happy": 5,
+                "sad": 1,
+                "neutral": 3,
+                "angry": 1
             }
         },
-        "combined": [
-            {
-                "value": 6,
+        "combined": {
+            "gender": {
+                "value": 7,
                 "category": "Man"
             },
-            {
-                "value": 5,
+            "age": {
+                "value": 6,
                 "category": "40-50"
             },
-            {
-                "value": 6,
-                "category": "neutral"
+            "emotion": {
+                "value": 5,
+                "category": "happy"
             }
-        ]
+        }
     },
     "12.06.2021": {
         "raw": {
@@ -1726,19 +1553,192 @@
                 "fear": 1
             }
         },
-        "combined": [
-            {
+        "combined": {
+            "gender": {
                 "value": 8,
                 "category": "Man"
             },
-            {
+            "age": {
                 "value": 7,
                 "category": "30-40"
             },
-            {
+            "emotion": {
                 "value": 5,
                 "category": "happy"
             }
-        ]
+        }
+    },
+    "01.05.2021": {
+        "raw": {
+            "instance_1": {
+                "gender": "Man",
+                "age": 33,
+                "emotion": {
+                    "angry": 0.0005473453968610049,
+                    "disgust": 1.357312655891522e-07,
+                    "fear": 6.128556295805419,
+                    "happy": 82.75913205633974,
+                    "sad": 11.111639605565118,
+                    "surprise": 4.368916263087983e-07,
+                    "neutral": 0.00011937639497145679
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_2": {
+                "gender": "Woman",
+                "age": 34,
+                "emotion": {
+                    "angry": 6.975313348268449e-12,
+                    "disgust": 3.8644281721682306e-21,
+                    "fear": 2.4699393275674497e-13,
+                    "happy": 99.91379379712306,
+                    "sad": 3.975763844196396e-08,
+                    "surprise": 3.8629851621867906e-09,
+                    "neutral": 0.08620584781018482
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_3": {
+                "gender": "Man",
+                "age": 37,
+                "emotion": {
+                    "angry": 1.2876586907850651e-06,
+                    "disgust": 1.38514105242106e-11,
+                    "fear": 7.019219649961883e-08,
+                    "happy": 99.95205402374268,
+                    "sad": 3.3926518483440304e-06,
+                    "surprise": 7.300198223703092e-08,
+                    "neutral": 0.047942172386683524
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_4": {
+                "gender": "Woman",
+                "age": 33,
+                "emotion": {
+                    "angry": 7.202320665803722e-05,
+                    "disgust": 5.2833584088766035e-09,
+                    "fear": 0.00112207858098653,
+                    "happy": 99.98718499984562,
+                    "sad": 0.000643926691191845,
+                    "surprise": 0.0030604522190875224,
+                    "neutral": 0.007921948634562479
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_5": {
+                "gender": "Woman",
+                "age": 33,
+                "emotion": {
+                    "angry": 6.957751304906478e-12,
+                    "disgust": 2.7943484307878256e-18,
+                    "fear": 2.870715988945606e-10,
+                    "happy": 99.98305439848032,
+                    "sad": 1.0727134403985698e-08,
+                    "surprise": 2.3308274478665522e-07,
+                    "neutral": 0.016947747927304233
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_6": {
+                "gender": "Man",
+                "age": 37,
+                "emotion": {
+                    "angry": 9.101974138584976e-12,
+                    "disgust": 5.599618064095897e-21,
+                    "fear": 2.7323595165276325e-13,
+                    "happy": 99.95771050453186,
+                    "sad": 5.531248375989506e-09,
+                    "surprise": 5.1329567440916435e-05,
+                    "neutral": 0.04224043805152178
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_7": {
+                "gender": "Man",
+                "age": 34,
+                "emotion": {
+                    "angry": 0.01483317610109225,
+                    "disgust": 2.6859856561145534e-07,
+                    "fear": 2.0616135998352547e-05,
+                    "happy": 98.59678149223328,
+                    "sad": 0.018724106485024095,
+                    "surprise": 0.000530304077983601,
+                    "neutral": 1.3691183179616928
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_8": {
+                "gender": "Man",
+                "age": 25,
+                "emotion": {
+                    "angry": 3.602758049964905,
+                    "disgust": 1.874530113354922e-05,
+                    "fear": 11.747587472200394,
+                    "happy": 1.6443751752376556,
+                    "sad": 83.00448060035706,
+                    "surprise": 6.337595781502614e-07,
+                    "neutral": 0.0007790066774759907
+                },
+                "dominant_emotion": "sad"
+            },
+            "instance_9": {
+                "gender": "Woman",
+                "age": 35,
+                "emotion": {
+                    "angry": 5.861624785552522e-06,
+                    "disgust": 8.019633405704357e-12,
+                    "fear": 4.075980442053151e-06,
+                    "happy": 99.32842254638672,
+                    "sad": 0.024548126384615898,
+                    "surprise": 3.263825476551574e-05,
+                    "neutral": 0.6469892337918282
+                },
+                "dominant_emotion": "happy"
+            },
+            "instance_10": {
+                "gender": "Man",
+                "age": 25,
+                "emotion": {
+                    "angry": 0.1406929106451571,
+                    "disgust": 2.882022176464716e-07,
+                    "fear": 9.937643881130498e-05,
+                    "happy": 0.35634892992675304,
+                    "sad": 3.8691584020853043,
+                    "surprise": 1.3013838895403751e-05,
+                    "neutral": 95.63368558883667
+                },
+                "dominant_emotion": "neutral"
+            }
+        },
+        "prepared": {
+            "gender": {
+                "Man": 6,
+                "Woman": 4
+            },
+            "age": {
+                "40-50": 8,
+                "30-40": 2
+            },
+            "emotion": {
+                "happy": 8,
+                "sad": 1,
+                "neutral": 1
+            }
+        },
+        "combined": {
+            "gender": {
+                "value": 6,
+                "category": "Man"
+            },
+            "age": {
+                "value": 8,
+                "category": "40-50"
+            },
+            "emotion": {
+                "value": 8,
+                "category": "happy"
+            }
+        }
     }
 }

@@ -21,13 +21,17 @@ class Companies(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
     companyDir = db.Column(db.String(64), unique=True)
+    firstUpdate = db.Column(db.String(64))
+    lastUpdate = db.Column(db.String(64))
 
     @staticmethod
     def get_attribute(sql_alchemy_result):
         return {
             'id': sql_alchemy_result.id,
             'name': sql_alchemy_result.name,
-            'companyDir': sql_alchemy_result.companyDir
+            'companyDir': sql_alchemy_result.companyDir,
+            'firstUpdate': sql_alchemy_result.firstUpdate,
+            'lastUpdate': sql_alchemy_result.lastUpdate,
         }
 
 

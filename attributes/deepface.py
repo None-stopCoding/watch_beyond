@@ -53,8 +53,8 @@ def combine_categories(result):
 
 
 def combine_attributes(combined_categories):
-    combined_attributes = []
-    for attr, values in combined_categories.items():
-        combined_attributes.append(get_max_category_combined(values))
+    combined_attributes = {}
+    for attr, attr_values in combined_categories.items():
+        combined_attributes[attr] = get_max_category_combined(attr_values)
 
     return combined_attributes

@@ -28,9 +28,13 @@ def pipe(func):
     return wrapper
 
 
+def get_date(string_date):
+    return date(*list(map(int, reversed(string_date.split('.')))))
+
+
 def create_timeline(date_from, date_to, period):
-    start = date(*list(map(int, reversed(date_from.split('.')))))
-    end = date(*list(map(int, reversed(date_to.split('.')))))
+    start = get_date(date_from)
+    end = get_date(date_to)
 
     timeline = [start]
     while timeline[-1] < end:
