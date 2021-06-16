@@ -36,3 +36,17 @@ export const getAttributes = (companyId, params) =>
 export const getAttributeById = (id) =>
     callService(`api/attribute/getOne/${id}`, { method: 'GET' })
         .then((res) => res || {})
+
+export const getBorderAnalysisDates = (companyId) => {
+    let firstDate = null;
+    return callService(`/api/settings/${companyId}/analysis/getFirstDate`, { method: 'GET' })
+        .then((date) => firstDate = date)
+        .then(() => callService(`/api/settings/${companyId}/analysis/getLastDate`, { method: 'GET' }))
+        .then((date) => ({
+            first: firstDate,
+            last: date
+        }));
+};
+
+export const getTimeline = (companyId, params) =>
+    callService(`/api/settings/${companyId}/analysis/getTimeline?${parseGetParams(params)}`, { method: 'GET' })
