@@ -95,18 +95,57 @@ class Analysis:
         if period == 'weeks':
             for date, analysis in report.items():
                 if get_date(date_from) <= get_date(date) <= get_date(date_to):
-                    point = {'name': date}
-                    point.update(analysis['combined'])
-                    combined.append(point)
+                    combined.append({**{'name': date}, **analysis['combined']})
+            combined.sort(key=lambda x: get_date(x['name']))
             return combined
 
         return None
 
+    def get_attributes_by_categories(self, date_from, date_to, period):
+        report = self.get_report()
+        attributes = {}
+        unique_categories = {}
+
+        if period == 'weeks':
+            for date, analysis in report.items():
+                if get_date(date_from) <= get_date(date) <= get_date(date_to):
+                    for attr, categories in analysis['prepared'].items():
+                        if attr not in attributes:
+                            attributes[attr] = []
+                        attributes[attr].append({**{'name': date}, **categories})
+                        unique_categories[attr] = unique_categories.get(attr, set()).union(set(categories.keys()))
+
+            # Заполняем знаечниями по умолчанию необнаруженные,
+            # но существующие категории для каждой даты
+            for attr, categories in unique_categories.items():
+                full_points = []
+                for point in attributes[attr]:
+                    full_points.append(point)
+                    for cat in categories:
+                        if cat not in point.keys():
+                            full_points[-1] = {**full_points[-1], **{cat: 0}}
+
+                attributes[attr] = full_points
+
+            for attr in attributes.values():
+                attr.sort(key=lambda x: get_date(x['name']))
+
+            return attributes
+
+        return None
+
+    def get_current_categories(self):
+        report = self.get_report()
+        last_analysis = report[self.company.lastUpdate]['prepared']
+        attributes = {}
+
+        for attr, categories in last_analysis.items():
+            attributes[attr] = [{'name': category, 'value': value} for category, value in categories.items()]
+
+        return attributes
+
 
 if __name__ == '__main__':
     app = create_app()
-    context = app.app_context()
-    context.push()
-    Analysis(company_id=1).fill_empty_report()
-
-    context.pop()
+    with app.app_context():
+        Analysis(company_id=1).fill_empty_report()
