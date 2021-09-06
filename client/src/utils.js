@@ -18,103 +18,66 @@ export const getTheme = () => createMuiTheme({
     }
 })
 
+export const translateAttributes = (attributeName) => {
+    const dict = {
+        age: 'Возраст',
+        gender: 'Пол',
+        emotion: 'Эмоция'
+    }
 
-// import Chart from "react-google-charts";
-//
-// const [error, setError] = useState(null);
-// const [isLoaded, setIsLoaded] = useState(false);
-// const [gender, setGender] = useState(null);
-// const [age, setAge] = useState(null);
-// const [imageAmount, setAmount] = useState(0);
-//
-// const getData = () => {
-//     fetch("http://localhost:5000/")
-//         .then(res => res.json())
-//         .then(
-//             (result) => {
-//                 setIsLoaded(true);
-//                 const gender = {
-//                     'Woman': 0,
-//                     'Man': 0
-//                 };
-//                 const age = {
-//                     'kid': 0,
-//                     'adult': 0,
-//                     'grownUp': 0,
-//                     'old': 0
-//                 };
-//                 console.log(result);
-//                 setAmount(Object.keys(result).length);
-//                 Object.keys(result).forEach((img) => {
-//                     const res = result[img];
-//                     gender[res.gender]++;
-//                     age[0 <= res.age && res.age < 20 ? 'kid' :
-//                         20 <= res.age && res.age < 40 ? 'adult' :
-//                             40 <= res.age && res.age < 60 ? 'grownUp' :
-//                                 60 <= res.age ? 'old' : 'None']++;
-//                 });
-//
-//                 setGender(gender);
-//                 setAge(age);
-//             },
-//             (error) => {
-//                 setIsLoaded(true);
-//                 setError(error);
-//             }
-//         )
-// }
-//
-// useEffect(() => getData(), [getData])
-//
-// if (error) {
-//     return <div>Ошибка: {error.message}</div>;
-// } else if (!isLoaded) {
-//     return <div>Загрузка...</div>;
-// } else {
-//     return (
-//         <div className="App">
-//             <header className="App-header">
-//                 <div style={{ display: 'flex', maxWidth: 900, flexDirection: 'column', minHeight: 1200,
-//                     justifyContent: "space-between"
-//                 }}>
-//                     <Chart
-//                         width={800}
-//                         height={500}
-//                         chartType="BarChart"
-//                         loader={<div>Loading Chart</div>}
-//                         images={[
-//                             ['Gender', 'Количество'],
-//                             ['Мужской', gender?.Man || 0],
-//                             ['Женский', gender?.Woman || 0]
-//                         ]}
-//                         options={{
-//                             title: `Кол-во человек каждого пола (всего: ${imageAmount})`,
-//                             vAxis: { title: 'Пол', titleTextStyle: { color: '#333' } }
-//                         }}
-//                     />
-//                     <Chart
-//                         width={800}
-//                         height={500}
-//                         chartType="BarChart"
-//                         loader={<div>Loading Chart</div>}
-//                         images={[
-//                             ['Age', 'Количество'],
-//                             ['0-20', age?.kid || 0],
-//                             ['20-40', age?.adult || 0],
-//                             ['40-60', age?.grownUp || 0],
-//                             ['60-80', age?.old || 0]
-//                         ]}
-//                         options={{
-//                             title: `Кол-во человек каждого возраста (всего: ${imageAmount})`,
-//                             vAxis: { title: 'Возраст', titleTextStyle: { color: '#333' } }
-//                         }}
-//                     />
-//                 </div>
-//             </header>
-//         </div>
-//     );
-// }
+    return dict[attributeName] || attributeName;
+}
 
+export const translateCategories = (categoryName) => {
+    const dict = {
+        Man: 'Мужчина',
+        Woman: 'Женщина',
+
+        happy: 'Счастье',
+        neutral: 'Нейтральное',
+        angry: 'Злость',
+        fear: 'Страх',
+        sad: 'Грусть',
+        surprise: 'Удивление',
+    }
+
+    return dict[categoryName] || categoryName;
+}
+
+export const getStrokeByAttribute = (attribute) => {
+    const dict = {
+        age: '#8884d8',
+        gender: '#2ca02c',
+        emotion: '#ff7f0e',
+        race: '#1f77b4'
+    }
+
+    return dict[attribute] || '#8884d8';
+}
+
+export const getStrokeByCategory = (category, add) => {
+    const dict = {
+        Man: '#8884d8',
+        Woman: '#2ca02c',
+
+        '30-40': '#F8AFA6',
+        '40-50': '#1f77b4',
+        '50-60': '#E1C340',
+        '60-70': '#5885AF',
+
+        angry: '#FFA384',
+        fear: '#67595E',
+        happy: '#FFAEBC',
+        neutral: '#74BDCB',
+        sad: '#81B622',
+        surprise: '#868B8E'
+    }
+    if (add) {
+        debugger;
+    }
+
+    return dict[category] || '#8884d8';
+}
 
 // const availableActions = [
 //     {

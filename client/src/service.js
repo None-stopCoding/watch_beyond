@@ -25,9 +25,22 @@ const callService = (url, options) =>
 
 const parseGetParams = (params) => Object.keys(params).map((key) => `${key}=${params[key]}`).join('&');
 
-export const getAttributesTrends = (params) =>
-    callService(`api/profile/getTrends?${parseGetParams(params)}`, { method: 'GET' })
+/**
+ * /api/profile
+ */
 
+export const getCombinedTrends = (companyId, params) =>
+    callService(`api/profile/${companyId}/getTrends?${parseGetParams(params)}`, { method: 'GET' })
+
+export const getProfileAttributesTrends = (companyId, params) =>
+    callService(`api/profile/${companyId}/attributes/getTrends?${parseGetParams(params)}`, { method: 'GET' })
+
+export const getCurrentAttributes = (companyId) =>
+    callService(`api/profile/${companyId}/attributes/getCurrent`, { method: 'GET' })
+
+/**
+ * /api/attribute
+ */
 
 export const getAttributes = (companyId, params) =>
     callService(`api/attribute/${companyId}/getAll?${parseGetParams(params)}`, { method: 'GET' })
@@ -36,3 +49,21 @@ export const getAttributes = (companyId, params) =>
 export const getAttributeById = (id) =>
     callService(`api/attribute/getOne/${id}`, { method: 'GET' })
         .then((res) => res || {})
+
+/**
+ * /api/settings
+ */
+
+export const getBorderAnalysisDates = (companyId) => {
+    let firstDate = null;
+    return callService(`/api/settings/${companyId}/analysis/getFirstDate`, { method: 'GET' })
+        .then((date) => firstDate = date)
+        .then(() => callService(`/api/settings/${companyId}/analysis/getLastDate`, { method: 'GET' }))
+        .then((date) => ({
+            first: firstDate,
+            last: date
+        }));
+};
+
+export const getTimeline = (companyId, params) =>
+    callService(`/api/settings/${companyId}/analysis/getTimeline?${parseGetParams(params)}`, { method: 'GET' })

@@ -1,7 +1,8 @@
-import { Container, Grid, Paper, Button } from '@material-ui/core';
+import { Container, Grid, Paper, Button, Fab, Tooltip } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Cached } from '@material-ui/icons';
 
-import { Chart } from './../components';
+import { Chart, Settings, Combined as AttributesGraphsCombined } from './../components';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Profile() {
-    const classes = useStyles(useTheme());
+    const theme = useTheme();
+    const classes = useStyles(theme);
 
     return (
         <Container className={classes.root}>
@@ -31,11 +33,29 @@ function Profile() {
                         <Chart />
                     </Grid>
                     <Grid item xs={3} sm container direction='column' spacing={3}>
-                        <Grid item style={{ height: 50 }}>
-                            <Button>Обновить</Button>
+                        <Grid item style={{ height: 60 }}>
+                            <Tooltip title="Анализ проводится каждую неделю. Однако можно проанализировать данные на текущий момент.">
+                                <Fab variant="extended" style={{ backgroundColor: theme.palette.secondary.main }}>
+                                    <Cached style={{ marginRight: 10 }}/>
+                                    Провести анализ
+                                </Fab>
+                            </Tooltip>
                         </Grid>
                         <Grid item xs>
-                            <Paper className={classes.graphSettings} elevation={4}>graph settings</Paper>
+                            <Paper className={classes.graphSettings} elevation={4}>
+                                <Settings content={{
+                                    period: {
+                                        items: {
+                                            years: 'Год',
+                                            months: 'Месяц',
+                                            weeks: 'Неделя'
+                                        },
+                                        default: 'weeks'
+                                    },
+                                    slider: true,
+                                    chips: true
+                                }} onChange={console.error}/>
+                            </Paper>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -44,6 +64,9 @@ function Profile() {
                 </Grid>
                 <Grid item xs={6}>
                     <Paper className={classes.staticInfo} elevation={4}>static info 2</Paper>
+                </Grid>
+                <Grid item xs>
+                    <AttributesGraphsCombined />
                 </Grid>
             </Grid>
         </Container>
